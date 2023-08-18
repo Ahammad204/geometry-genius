@@ -26,6 +26,13 @@ function calculateRectangleArea (){
     const lengthValueText = lengthField.value;
     const length = parseFloat(lengthValueText);
 
+    if(isNaN(width) || isNaN(length)){
+
+        alert('Please insert a number');
+        return;
+
+    }
+
     const area = width * length;
 
     const areaSpan = document.getElementById('rectangle-area');
@@ -40,6 +47,13 @@ function calculateParallelogramArea() {
     const base = getInputValue('Parallelogram-base');
 
     const height = getInputValue('Parallelogram-height');
+
+    if(isNaN(base) || isNaN(height)){
+
+        alert('Please insert a number');
+        return;
+
+    }
 
     const area = base * height;
 
@@ -77,3 +91,4 @@ function calculateEllipseArea (){
     setElementInnerText('Ellipse-area', areaTwoDecimal);
 
 }
+
