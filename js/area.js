@@ -64,3 +64,16 @@ function setElementInnerText (elementId, area){
     element.innerText = area;
 
 }
+
+
+function calculateEllipseArea (){
+
+    const majorRadius = getInputValue ('Ellipse-major-radius');
+    const minorRadius = getInputValue ('Ellipse-minor-radius');
+    const area = 3.1416 * majorRadius * minorRadius;
+
+    const areaTwoDecimal = area.toFixed(2);
+
+    setElementInnerText('Ellipse-area', areaTwoDecimal);
+
+}
